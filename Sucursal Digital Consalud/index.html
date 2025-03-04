@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consalud Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección izquierda: Formulario de inicio de sesión -->
+        <div class="left-section">
+            <div class="logo">
+                <img src="https://clientes.consalud.cl/styleguide-spa/b5fc9c0419c32e6789bc.svg" alt="Consalud logo">
+            </div>
+            <div class="login-form">
+                <h2>Ingresa a tu <span class="highlight">Consalud</span></h2>
+                <p>¡Haz tus trámites más simples!</p>
+                <label for="rut">RUT</label>
+                <input type="text" id="rut" placeholder="12.345.678-9">
+                <label for="password">Clave</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="******">
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
+                <a href="#" class="forgot-password">¿Olvidaste tu clave?</a>
+                <button class="login-button">Ingresar</button>
+                <button class="fingerprint-button">
+                    Ingresar con huella
+                    <img src="https://clientes.consalud.cl/styleguide-spa/6ff23085a0e94992a610.svg" alt="Fingerprint icon">
+                </button>
+            </div>
+            <div class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <a href="#">Volver a <span class="highlight">Consalud.cl</span></a>
+            </div>
+        </div>
+
+        <!-- Sección derecha: Información y servicios -->
+        <div class="right-section">
+            <div class="icons">
+                <div class="icon">
+                    <img src="https://clientes.consalud.cl/login-spa/478c44db1a7d2a1300f6.svg" alt="Consalud Mobile icon">
+                    <p>¡Consalud Mobile!</p>
+                </div>
+                <div class="icon">
+                    <img src="https://clientes.consalud.cl/login-spa/208a6206b2ca009500f7.svg" alt="Online services icon">
+                </div>
+                <div class="icon">
+                    <img src="https://clientes.consalud.cl/login-spa/71dbd7d170fd7ff859fa.svg" alt="Family services icon">
+                </div>
+            </div>
+            <div class="info">
+                <h2>¡Bienvenido a tu Sucursal Digital!</h2>
+                <p>Instala Consalud Mobile en tu teléfono y realiza tus trámites de forma simple, rápida y segura.</p>
+                <a href="#">¿Cómo instalar Consalud Mobile?</a>
+            </div>
+            <div class="feedback">Feedback</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
