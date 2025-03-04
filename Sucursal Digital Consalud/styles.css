@@ -1,179 +1,290 @@
-/* Estilos generales */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    position: relative 
+
+.left-section {
+    width: 50%;
+    padding: 2.5rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.login-form {
+    max-width: 400px; /* Establece un ancho máximo para el formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 1rem; /* Añade un poco de padding alrededor del formulario */
+    background-color: #ffffff; /* Color de fondo opcional para el formulario */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+.left-section {
+    width: 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px; /* Ajusta este valor según sea necesario */
+    left: 20px; /* Ajusta este valor según sea necesario */
+}
+
+.back-link i {
+    margin-right: 8px;
+    color: #00CBBF;
+}
+
+.back-link a {
+    color: #00CBBF;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    background-color: #f4f4f4;
 }
 
 .container {
     display: flex;
     width: 100%;
-}
-
-.left-section, .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
 }
 
 .left-section {
-    background-color: #fff;
-    padding: 20px;
-}
-
-.right-section {
-    background-color: #00c4cc;
-    color: #fff;
+    width: 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
     position: relative;
 }
 
-/* Logo */
-.logo img {
-    width: 150px;
-    margin-bottom: 20px;
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 30px;
 }
-
-/* Formulario de inicio de sesión */
-.login-form {
-    width: 100%;
-    max-width: 400px;
+.logo img {
+    width: 8.1rem;
 }
 
 .login-form h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700px;
 }
 
-.login-form p {
-    font-size: 14px;
-    margin-bottom: 20px;
+.highlight {
+    color: #00CBBF;
 }
 
-.login-form label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.login-form input {
-    width: 100%;
-    padding: 10px;
+p {
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    color: #666;
+}
+
+label {
     font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+    border-radius: 100px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
 }
 
 .password-container {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .password-container input {
-    padding-right: 40px;
+    flex: 1;
 }
 
-.toggle-password {
+.password-container .toggle-password {
     position: absolute;
     right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
     cursor: pointer;
-    color: #00c4cc;
+    color: #aaa;
 }
 
 .forgot-password {
-    color: #6a0dad;
-    text-align: right;
-    margin-bottom: 20px;
-    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    color: #512FD7;
     text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+
 }
 
 .login-button, .fingerprint-button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
+    margin-top: 15px;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
 .login-button {
-    background-color: #00c4cc;
+    background-color: #00CBBF;
     color: #fff;
+    font-weight: 600;
+    border-radius: 100px;
 }
 
 .fingerprint-button {
     background-color: #fff;
-    color: #00c4cc;
-    border: 1px solid #00c4cc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #00CBBF;
+    font-weight: 100;
+    border: 1px solid #00CBBF;
+    border-radius: 100px;
 }
 
 .fingerprint-button img {
-    margin-left: 10px;
     width: 20px;
-    height: 20px;
+    margin-left: 10px;
 }
 
-/* Enlace de volver */
 .back-link {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    color: #00c4cc;
-    font-size: 14px;
 }
 
 .back-link i {
-    margin-right: 5px;
+    margin-right: 8px;
+    color: #00CBBF;
 }
 
-/* Sección derecha: Información y servicios */
-.right-section .info {
-    text-align: center;
-    max-width: 400px;
+.back-link a {
+    color: #333;
+    text-decoration: none;
 }
 
-.right-section .info h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.right-section .info p {
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.right-section .info a {
-    color: #ffffff00;
+.back-link a:hover {
     text-decoration: underline;
 }
 
-.right-section .icons {
+.right-section {
+    width: 50%;
+    background: #00CBBF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
 }
 
 .right-section .icons .icon {
     background-color: #fff;
-    padding: 20px;
+    padding: 1rem; /* Ajuste del padding usando rem */
     border-radius: 10px;
+    text-align: center;
+    width: 100%; /* Ajuste del ancho */
+    max-width: 12.5rem; /* Ancho máximo para los íconos usando rem */
+}
+
+.icon img {
+    width: 4.5rem; /* Ajuste del ancho de la imagen del icono usando rem */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.icon p {
+    font-size: 1rem; /* Ajuste del tamaño de fuente usando rem */
+    margin-top: 0.5rem; /* Ajuste del margen superior usando rem */
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.icon {
     text-align: center;
 }
 
-.right-section .icons .icon img {
-    width: 50px;
+.icon img {
+    margin: left 1rem;
+    width: 73px;
+    height: 96px;
 }
 
+.icon p {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.info h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 16px;
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.info a {
+    font-family: var(-- work - sans);
+    display: inline-block;
+    margin-top: 20px;
+    font-size: .8rem;
+    background-color: #ffffff;
+    color: #00CBBF;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+/* Feedback */
+.feedback {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
