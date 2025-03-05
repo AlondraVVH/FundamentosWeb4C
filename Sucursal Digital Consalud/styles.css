@@ -1,48 +1,10 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    position: relative }
-    
-.login-form {
-    max-width: 400px; /* Establece un ancho máximo para el formulario */
-    margin: 0 auto; /* Centra el formulario horizontalmente */
-    padding: 1rem; /* Añade un poco de padding alrededor del formulario */
-    background-color: #ffffff; /* Color de fondo opcional para el formulario */
-    border-radius: 10px; /* Bordes redondeados opcionales */
-}
-.left-section {
-    width: 50%;
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
     position: relative;
-}
-
-.back-link {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 20px; /* Ajusta este valor según sea necesario */
-    left: 20px; /* Ajusta este valor según sea necesario */
-}
-
-.back-link i {
-    margin-right: 8px;
-    color: #00CBBF;
-}
-
-.back-link a {
-    color: #00CBBF;
-    text-decoration: none;
-}
-
-.back-link a:hover {
-    text-decoration: underline;
 }
 
 body {
@@ -54,12 +16,14 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
+/* Sección izquierda: Formulario de inicio de sesión */
 .left-section {
     width: 50%;
     padding: 2.5rem;
@@ -70,18 +34,29 @@ body {
     position: relative;
 }
 
+/* Logo */
 .logo {
     position: absolute;
     top: 40px;
     left: 30px;
 }
+
 .logo img {
     width: 8.1rem;
 }
 
+/* Formulario de inicio de sesión */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
 .login-form h2 {
     font-size: 26px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
 .highlight {
@@ -133,12 +108,10 @@ input {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-
 }
 
 .forgot-password:hover {
     text-decoration: underline;
-
 }
 
 .login-button, .fingerprint-button {
@@ -161,20 +134,29 @@ input {
 .fingerprint-button {
     background-color: #fff;
     color: #00CBBF;
-    font-weight: 100;
+    font-weight: 600;
     border: 1px solid #00CBBF;
     border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 12px;
 }
 
 .fingerprint-button img {
-    width: 20px;
-    margin-left: 10px;
+    width: 8dvh;
+    margin-left: 8px;
 }
 
+/* Enlace de volver */
 .back-link {
     display: flex;
     align-items: center;
     margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 
 .back-link i {
@@ -183,14 +165,13 @@ input {
 }
 
 .back-link a {
-    color: #333;
+    color: #393b3b;
     text-decoration: none;
 }
 
 .back-link a:hover {
     text-decoration: underline;
 }
-
 
 /* Sección derecha: Información y servicios */
 .right-section {
@@ -203,109 +184,105 @@ input {
     text-align: center;
     color: white;
     padding: 40px;
-    position: relative; /* Para posicionar el feedback correctamente */
+    position: relative;
 }
 
 /* Contenedor de íconos */
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre los íconos */
-    margin-bottom: 30px;
-}
-
-/* Estilos para cada ícono */
-.right-section .icons .icon {
-    background-color: #fff; /* Fondo blanco */
-    padding: 20px; /* Padding interno */
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center;
-    width: 120px; /* Ancho fijo para los íconos */
-    height: 120px; /* Altura fija para los íconos */
-    display: flex;
-    flex-direction: column;
+.cont-img {
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Imágenes dentro de los íconos */
-.right-section .icons .icon img {
-    width: 50px; /* Tamaño de las imágenes */
-    height: 50px; /* Tamaño de las imágenes */
-    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+.rows-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5dvh;
 }
 
-/* Texto debajo de los íconos */
-.right-section .icons .icon p {
-    font-size: 14px; /* Tamaño de fuente */
-    color: #00CBBF; /* Color del texto */
-    font-weight: 500; /* Grosor de la fuente */
-    margin: 0; /* Eliminar margen predeterminado */
+#space1 {
+    margin-right: 30dvh;
 }
 
-/* Información debajo de los íconos */
+#space2 {
+    padding-right: 30dvh;
+}
+
+#space3 {
+    margin-right: 30dvh;
+}
+
+img {
+    padding: 2dvh;
+    width: 15dvh;
+    height: auto;
+    background-color: #fff;
+    border-radius: 3dvh;
+}
+
+#img-1 {
+    padding-top: 3dvh;
+    padding-bottom: 3dvh;
+}
+
+.cont-img2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 2dvh;
+    border-radius: 3dvh;
+    margin-right: 10dvh;
+}
+
+.cont-img2 span {
+    font-weight: bolder;
+    margin: 4px;
+    color: #666;
+}
+
+#img-2 {
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0%;
+    margin-bottom: 1dvh;
+    width: 10dvh;
+    transform: translateX(1dvh);
+}
+
+#img-3 {
+    width: 17dvh;
+    height: auto;
+    padding-top: 4dvh;
+    padding-bottom: 4dvh;
+    padding-right: 5dvh;
+    padding-left: 5dvh;
+}
+
+/* Información adicional */
 .right-section .info {
     text-align: left;
-    max-width: 400px; /* Ancho máximo del texto */
-    
+    max-width: 400px;
+    font-family: 'Work Sans', sans-serif;
+    transform: translateX(-8dvh);
 }
 
 .right-section .info h2 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
-}
-.right-section .icons {
-    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
-    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
-    height: 100%; /* Asegúrate de que el contenedor ocupe toda la altura disponible */
+    transform: translateX(-8dvh);
 }
 
-.right-section .icons .icon1,
-.right-section .icons .icon2,
-.right-section .icons .icon3 {
-    background-color: #fff;
-    padding: 1rem; /* Ajuste del padding usando rem */
-    border-radius: 10px;
-    text-align: center;
-    width: 100%; /* Ajuste del ancho */
-    max-width: 12.5rem; /* Ancho máximo para los íconos usando rem */
-    position: absolute; /* Cambia la posición a absoluta */
-}
-
-.right-section .icons .icon1 {
-    bottom: 30px; /* Ajusta la posición inferior */
-    left: 20px; /* Ajusta la posición izquierda */
-    width: 170px;
-    height: 170px;
-    margin-right: 40%;
-    flex-direction: column;
-    align-items: center;
-    gap: .05rem;
-}
-
-.right-section .icons .icon2 {
-    bottom: 20px; /* Ajusta la posición inferior */
-    left: 160px; /* Ajusta la posición izquierda */
-    width: 135px;
-    height: 135px;
-    padding:  1rem;
-    display: flex; 
-    justify-content: center;
-}
-
-.right-section .icons .icon3 {
-    bottom: 20px; /* Ajusta la posición inferior */
-    left: 300px; /* Ajusta la posición izquierda */
-}
 .right-section .info p {
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 10px;
-    color: #fff; /* Color del texto */
+    color: #fff;
+    transform: translateX(-8dvh);
 }
 
-/* Enlace "¿Cómo instalar Consalud Mobile?" */
 .right-section .info a {
     display: inline-block;
     margin-top: 20px;
@@ -313,12 +290,12 @@ input {
     background-color: #ffffff;
     color: #00CBBF;
     font-weight: 600;
-    padding: 10px 20px; /* Padding para el botón */
-    border-radius: 100px; /* Bordes redondeados */
-    text-decoration: none; /* Quitar subrayado */
+    padding: 10px 20px;
+    border-radius: 100px;
+    text-decoration: none;
+    transform: translateX(-8dvh);
 }
 
 .right-section .info a:hover {
-    background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
+    background-color: #f0f0f0;
 }
-
