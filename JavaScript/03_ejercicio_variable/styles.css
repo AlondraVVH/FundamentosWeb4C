@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background-color: #f4f4f4; /* Fondo suave */
+    text-align: center; /* Centrar contenido */
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+button {
+    background: #4c5baf; /* Degradado verde */
+    border: none;
+    color: white;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 25px; /* Bordes más redondeados */
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+button:hover {
+    background: #456ca0 ; /* Cambio de color en hover */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

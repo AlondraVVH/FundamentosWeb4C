@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+background-color: darkgray;
+padding: 10px;
+}
+
+ul{
+list-style: none;
+display: flex;
+}
+
+li{
+margin: 0 15px;
+}
+
+a{
+text-decoration: none;
+color: white;
+font-weight: bold;
+}
+
+a:hover{
+    color:rgb(138, 171, 233);
+}
+
+button{
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(138, 171, 233);
+    cursor: pointer;
+}
