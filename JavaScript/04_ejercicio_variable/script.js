@@ -47,9 +47,9 @@ function declararVariables() {
     function manipularCadenas() {
     
     // Tu código aquí
-    let direccion = parseInt(prompt("Ingrese su dirección:"));
-    let n_casa = parseInt(prompt("Ingrese el número de casa:"));
-    let mensaje = "La dirección es: " + direccion + " " + n_casa;
-    alert("La direccion es: " + mensaje + "/n Cantidad de caracteres:" + mensaje.length() 
-    + "Caracter ante penultimo" + mensaje[mensaje.length -3]);
-    }
+    let direccion = prompt("Ingrese su dirección:");
+    let n_casa = prompt("Ingrese el número de casa:");
+    let mensaje = "" + direccion + " " + n_casa;
+    alert("La dirección es: " + mensaje + "\nCantidad de caracteres: " + mensaje.length 
+    + "\nCarácter antepenúltimo: " + mensaje[mensaje.length - 3]);
+    } 
