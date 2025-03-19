@@ -1,12 +1,17 @@
 // Crear un array con los números 1, 2, 3, 4, 5, 6, 7
 function Suma_indices() {
-    const arreglo = [1, 2, 3, 4, 5, 6, 7];
-    const resultado = arreglo[arreglo.length - 1] + arreglo[arreglo.length - 2] + arreglo[0];
-    alert(`El array es: ${arreglo}\nEl resultado de la suma es: ${resultado}`);
+    let array = [1,2,3,4,5,6,7];
+    let suma = array[0] + array[1] +
+    array[5] + array[6];
+    array[2] + array[3] + array[4] +
+    alert(`El arreglo es ${array.join(" - ")}:\nResultado: ${suma}`);
 }
 
+
 function Producto_pares() {
-    const arreglo = [2, 4, 6, 8, 10, 12];
-    const resultado = arreglo.reduce((producto, valor) => valor % 2 === 0 ? producto * valor : producto, 1);
-    alert(`El array es: ${arreglo}\nEl producto de los valores pares es: ${resultado}`);
+    let arreglo = [2, 4, 6, 8, 10, 12];
+    let producto = arreglo[0] * arreglo[1] *
+    arreglo[2] * arreglo[3] *
+    arreglo[4] * arreglo[5];
+    alert(`El array es: ${arreglo.join(" - ")}\nEl producto de los valores pares es: ${producto}`);
 }
