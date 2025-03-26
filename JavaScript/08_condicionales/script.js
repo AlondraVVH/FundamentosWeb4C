@@ -13,22 +13,24 @@ function calculadoraImc() {
     altura = altura / 100;
     let calculadoraImc = peso / (altura * altura);
         if ( calculadoraImc < 18.5) {
-            alert("Bajo peso");
+        alert("Bajo peso");
     }else if ( calculadoraImc >= 18.5 && calculadoraImc <= 24.9){
         alert("Peso normal");
     }else if ( calculadoraImc >= 25)
         alert("Sobrepeso");
 }
 
-function calculadorNotas() {
-    let nota1 = parseInt("introduce la primera nota");
-    let nota2 = parseInt("introduce la segunta nota");
-    let nota3 = parseInt("introduce la tercera nota");
+function calculadoraNotas() {
+    let nota1 = parseFloat(prompt("Introduce la primera nota:"));
+    let nota2 = parseFloat(prompt("Introduce la segunda nota:"));
+    let nota3 = parseFloat(prompt("Introduce la tercera nota:"));
+
     let promedio = (nota1 + nota2 + nota3) / 3;
 
-    if (promedio >= 4.0) {
-        alert("Aprobado con promedio:");
-    } if else (promedio <=)
-        alert("Reprobado con promedio:");
+    if (promedio >= 4) {
+        alert("Aprobado ");
+    } else {
+        alert("Desaprobado");
     }
 }
+
