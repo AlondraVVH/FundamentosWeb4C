@@ -8,8 +8,8 @@ function parInpar() {
 }
 
 function calculadoraImc() {
-    let peso = parseInt(prompt ("Introduce tu peso en kg:"));
-    let altura = parseInt(prompt ("Introduce tu altura en centimetros:"));
+    let peso = parseFloat(prompt ("Introduce tu peso en kg:"));
+    let altura = parseFloat(prompt ("Introduce tu altura en centimetros:"));
     altura = altura / 100;
     let calculadoraImc = peso / (altura * altura);
         if ( calculadoraImc < 18.5) {
