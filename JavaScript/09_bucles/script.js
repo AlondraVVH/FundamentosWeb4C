@@ -1,37 +1,46 @@
-function imprimirUnoACinco() {
-    let i = 1;
-    let resultado = "";
-    while (i <= 5) {
-        resultado += i + "\n";
-        i++;
+// 1 Bucle while: Imprimir del 1 a n
+function imprimirUnoAN() {
+    let n = parseInt(prompt("Ingresa un número límite (n):"));
+    let count = 1;
+    let array = [];
+    while (count <= n) {
+        array.push(count);
+        count++;
     }
-    alert(resultado);
+    alert(`Números del 1 al ${n}: ${array.join(" - ")}`);
 }
 
-function cuentaRegresiva() {
-    let i = 10;
-    let resultado = "";
-    while (i >= 1) {
-        resultado += i + "\n";
-        i--;
+// 2 Bucle while: Cuenta regresiva del n al 1
+function cuentaRegresivaN() {
+    let n = parseInt(prompt("Ingresa un número para la cuenta regresiva:"));
+    let array = [];
+    while (n >= 1) {
+        array.push(n);
+        n--;
     }
-    alert(resultado);
+    alert(`Cuenta regresiva: ${array.join(" - ")}`);
 }
 
-function sumarPrimerosCinco() {
+// 3 Bucle for: Sumar los n primeros números
+function sumarNPrimeros() {
+    let n = parseInt(prompt("Ingresa un número para sumar los primeros n números:"));
     let suma = 0;
-    for (let i = 1; i <= 5; i++) {
+    let array = [];
+    for (let i = 1; i <= n; i++) {
         suma += i;
+        array.push(i);
     }
-    alert("Suma de los primeros 5 números: " + suma);
+    alert(`Números sumados: ${array.join(" + ")} = ${suma}`);
 }
 
-function imprimirMultiplosDeDos() {
-    let resultado = "";
-    for (let i = 1; i <= 10; i++) {
+// 4 Bucle for: Imprimir múltiplos de 2 del 1 al n
+function imprimirMultiplosDeDosN() {
+    let n = parseInt(prompt("Ingresa el límite (n) para encontrar múltiplos de 2:"));
+    let array = [];
+    for (let i = 1; i <= n; i++) {
         if (i % 2 === 0) {
-            resultado += i + "\n";
+            array.push(i);
         }
     }
-    alert(resultado);
+    alert(`Múltiplos de 2 hasta ${n}: ${array.join(" - ")}`);
 }
