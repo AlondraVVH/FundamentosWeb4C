@@ -4,8 +4,8 @@ function imprimirUnoAN() {
     let count = 1;
     let array = [];
     while (count <= n) {
-        array.push(count);
-        count++;
+        array.push(n);// inseratar un valor al final del array
+        count++; // incrementa 1 al contador 
     }
     alert(`Números del 1 al ${n}: ${array.join(" - ")}`);
 }
