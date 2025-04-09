@@ -27,6 +27,8 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Efecto al pasar el mouse sobre el botón */

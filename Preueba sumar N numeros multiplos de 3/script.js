@@ -38,4 +38,4 @@ function sumarNMultiplosDeTres() {
         Múltiplos de 3 encontrados: ${arrayMultiploTres.join(", ")}
         Suma de múltiplos de 3: ${arrayMultiploTres.join(" + ")} = ${suma}
     `);
-}
+    }
