@@ -1,41 +1,68 @@
 // 1. Sumar los N primeros números naturales
 function ejercicio1() {
-    let n = Number(prompt("1. Ingresa un número N:"));
-    if (n <= 0) return;
+    let n = parseInt(prompt("Ingresa un número N: "));
     let suma = 0;
-    for (let i = 1; i <= n; i++) suma += i;
-    alert(`1. La suma es: ${suma}`);
+    let array = [];
+    for (let i = 1; i <= n; i++) {
+    suma += i;
+    array.push(i);
+    }
+    alert(`La suma de los numeros es: ${array.join(" + ")} es: ${suma}`);
 }
 
 // 2. Escribir los 100 primeros números pares
 function ejercicio2() {
     let pares = [];
-    for (let i = 1; pares.length < 100; i++) if (i % 2 === 0) pares.push(i);
-    alert(`2. Pares: ${pares.join(", ")}`);
+    for (let i = 1; i <= 200; i++) {
+        if (i % 2 === 0) {
+            pares.push(i)
+    }
+}
+    alert(`Estos son los primeros 100 números pares: ${pares.join(" - ")}`);
 }
 
 // 3. Escribir los 100 primeros números impares
 function ejercicio3() {
     let impares = [];
-    for (let i = 1; impares.length < 100; i++) if (i % 2 !== 0) impares.push(i);
-    alert(`3. Impares: ${impares.join(", ")}`);
+    for (let i = 1; i <= 200; i++) {
+        if (i % 2 !== 0) {
+            impares.push(i)
+        }
+    }
+    alert(`Estos son los primeros 100 números impares: ${impares.join(" - ")}`);
 }
 
 // 4. Sumar 5 números leídos por teclado
 function ejercicio4() {
     let suma = 0;
-    for (let i = 1; i <= 5; i++) suma += Number(prompt(`4. Número ${i}:`));
-    alert(`4. La suma es: ${suma}`);
+    let numeros = [];
+
+    for (let i = 1; i <= 5; i++) {
+        let n = parseInt(prompt(`Ingresa el número ${i}:`));
+        numeros.push(n);
+        suma += n;
+    }
+
+    alert(`Números ingresados: ${numeros.join(", ")} \nLa suma es: ${suma}`);
+
 }
+
 
 // 5. Sumar N números leídos por teclado
 function ejercicio5() {
-    let n = Number(prompt("5. ¿Cuántos números sumar?"));
-    if (n <= 0) return;
+    let n = parseInt(prompt("¿Cuántos números deseas sumar?"));
     let suma = 0;
-    for (let i = 1; i <= n; i++) suma += Number(prompt(`Número ${i}:`));
-    alert(`5. La suma es: ${suma}`);
+    let numeros = [];
+
+    for (let i = 1; i <= n; i++) {
+        let num = Number(prompt(`Número ${i}:`));
+        numeros.push(num);
+        suma += num;
+    }
+
+    alert(`Números ingresados: ${numeros.join(", ")}\nSuma total: ${suma}`);
 }
+
 
 // 6. Operaciones entre 2 números
 function ejercicio6() {
