@@ -11,8 +11,8 @@ function sumarNMultiplosDeTres() {
 
     // Inicializar variables
     let suma = 0;
-    let arrayInicial = [];       // Guarda todos los números
-    let arrayMultiploTres = [];  // Guarda solo los múltiplos de 3
+    let arrayInicial = [];       
+    let arrayMultiploTres = [];  
 
     // Repetir hasta que se ingresen N números
     for (let i = 0; i < n; i++) {

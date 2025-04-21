@@ -63,30 +63,32 @@ function ejercicio5() {
     alert(`Números ingresados: ${numeros.join(", ")}\nSuma total: ${suma}`);
 }
 
-
 // 6. Operaciones entre 2 números
 function ejercicio6() {
-    let a = Number(prompt("6. Primer número:"));
-    if (String(a) === "NaN") {
-        alert("¡El primer valor no es número!");
-        return;
-    }
-
-    let b = Number(prompt("Segundo número:"));
-    if (String(b) === "NaN") {
-        alert("¡El segundo valor no es número!");
-        return;
-    }
-
+    let a = prompt("6. Primer número:");
+    let b = prompt("Segundo número:");
     const op = prompt("Operación (+, -, *, /):");
+
+    if (!a || !b || !op) {
+        alert("Faltan valores requeridos");
+        return;
+    }
+
+    a = parseFloat(a);
+    b = parseFloat(b);
+
+    if (!a && a !== 0 || !b && b !== 0) {
+        alert("Los valores ingresados no son válidos");
+        return;
+    }
+
     let resultado;
-    
     if (op === "+") resultado = a + b;
     else if (op === "-") resultado = a - b;
     else if (op === "*") resultado = a * b;
     else if (op === "/") {
         if (b === 0) {
-            alert("¡No se puede dividir por cero!");
+            alert("No se puede dividir por cero");
             return;
         }
         resultado = a / b;
@@ -95,31 +97,33 @@ function ejercicio6() {
         return;
     }
 
-    alert(` Resultado: ${a} ${op} ${b} = ${resultado}`);
+    alert(`Operación: ${a} ${op} ${b} = ${resultado}`);
 }
 
 // 7. Sumar N números pares (ingresados por usuario)
 function ejercicio7() {
     let n = parseInt(prompt("7. ¿Cuántos números pares deseas sumar?"));
     if (!n || n <= 0) {
-        alert("¡Error! Debe ser un número mayor a 0");
+        alert("Debe ser un número mayor a 0");
         return;
     }
 
     let suma = 0;
+    let pares = [];
     for (let i = 1; i <= n; i++) {
         let num;
         do {
             num = parseInt(prompt(`Ingresa el número par #${i}:`));
-            if (String(num) === "NaN" || num % 2 !== 0) {
-                alert("¡Solo se aceptan números pares!");
-                num = null; // Forzar repetición
+            if (!num && num !== 0 || num % 2 !== 0) {
+                alert("Solo se aceptan números pares");
+                num = null;
             }
         } while (num === null);
-        
+
+        pares.push(num);
         suma += num;
     }
-    alert(`Suma de ${n} pares: ${suma}`);
+    alert(`Números ingresados: ${pares.join(", ")}\nSuma total: ${suma}`);
 }
 
 // 8. Sumar los N primeros pares
@@ -127,32 +131,39 @@ function ejercicio8() {
     let n = Number(prompt("8. ¿Cuántos pares (2,4,6...) sumar?"));
     if (n <= 0) return;
     let suma = 0;
-    for (let i = 1; i <= n; i++) suma += i * 2;
-    alert(`8. Suma: ${suma}`);
+    let pares = [];
+    for (let i = 1; i <= n; i++) {
+        let par = i * 2;
+        pares.push(par);
+        suma += par;
+    }
+    alert(`Números pares: ${pares.join(" + ")}\nSuma total: ${suma}`);
 }
 
 // 9. Sumar N números impares (ingresados por usuario)
 function ejercicio9() {
     let n = Number(prompt("9. ¿Cuántos impares deseas sumar?"));
-    if (!n || n <= 0) { // Number convierte texto no numérico a NaN (falsy)
-        alert("¡Valor inválido! Ingresa un número positivo");
+    if (!n || n <= 0) {
+        alert("Ingresa un número positivo");
         return;
     }
 
     let suma = 0;
+    let impares = [];
     for (let i = 1; i <= n; i++) {
         let num;
         do {
             num = Number(prompt(`Ingresa el impar #${i}:`));
-            if (String(num) === "NaN" || num % 2 === 0) {
-                alert("¡Debe ser un número impar!");
+            if (!num && num !== 0 || num % 2 === 0) {
+                alert("Debe ser un número impar");
                 num = undefined;
             }
         } while (num === undefined);
-        
+
+        impares.push(num);
         suma += num;
     }
-    alert(`Suma de ${n} impares: ${suma}`);
+    alert(`Números impares ingresados: ${impares.join(", ")}\nSuma total: ${suma}`);
 }
 
 // 10. Sumar los N primeros impares
@@ -160,8 +171,13 @@ function ejercicio10() {
     let n = Number(prompt("10. ¿Cuántos impares (1,3,5...) sumar?"));
     if (n <= 0) return;
     let suma = 0;
-    for (let i = 0; i < n; i++) suma += 2 * i + 1;
-    alert(`10. Suma: ${suma}`);
+    let impares = [];
+    for (let i = 0; i < n; i++) {
+        let impar = 2 * i + 1;
+        impares.push(impar);
+        suma += impar;
+    }
+    alert(`Números impares: ${impares.join(" + ")}\nSuma total: ${suma}`);
 }
 
 // 11. Sumar los N primeros múltiplos de 3
@@ -169,8 +185,13 @@ function ejercicio11() {
     let n = Number(prompt("11. ¿Cuántos múltiplos de 3 sumar?"));
     if (n <= 0) return;
     let suma = 0;
-    for (let i = 1; i <= n; i++) suma += i * 3;
-    alert(`11. Suma: ${suma}`);
+    let multiplos = [];
+    for (let i = 1; i <= n; i++) {
+        let m3 = i * 3;
+        multiplos.push(m3);
+        suma += m3;
+    }
+    alert(`Múltiplos de 3: ${multiplos.join(" + ")}\nSuma total: ${suma}`);
 }
 
 // 12. Calcular factorial de N
@@ -178,20 +199,23 @@ function ejercicio12() {
     let n = Number(prompt("12. Factorial de:"));
     if (n < 0) return;
     let fact = 1;
-    for (let i = 1; i <= n; i++) fact *= i;
-    alert(`12. ${n}! = ${fact}`);
+    let pasos = [];
+    for (let i = 1; i <= n; i++) {
+        pasos.push(i);
+        fact *= i;
+    }
+    alert(`${n}! = ${pasos.join(" × ")} = ${fact}`);
 }
 
 // 13. Celsius a Fahrenheit
 function ejercicio13() {
     let celsius = parseFloat(prompt("13. Grados Celsius:"));
-    if (String(celsius) === "NaN") {
-        alert("¡Ingresa solo números!");
+    if (!celsius && celsius !== 0) {
+        alert("Ingresa solo números");
         return;
     }
-    
     let fahrenheit = (celsius * 1.8) + 32;
-    alert(`🌡 ${celsius}°C = ${fahrenheit.toFixed(1)}°F`);
+    alert(`${celsius}°C = ${fahrenheit.toFixed(1)}°F`);
 }
 
 // 14. Palabra más larga
@@ -200,7 +224,7 @@ function ejercicio14() {
     let palabras = frase.split(" ");
     let larga = "";
     for (let p of palabras) if (p.length > larga.length) larga = p;
-    alert(`14. Palabra más larga: ${larga}`);
+    alert(`Palabra más larga: ${larga}`);
 }
 
 // 15. Números primos hasta N
@@ -210,11 +234,14 @@ function ejercicio15() {
     for (let i = 2; i <= n; i++) {
         let esPrimo = true;
         for (let j = 2; j <= Math.sqrt(i); j++) {
-            if (i % j === 0) { esPrimo = false; break; }
+            if (i % j === 0) {
+                esPrimo = false;
+                break;
+            }
         }
         if (esPrimo) primos.push(i);
     }
-    alert(`15. Primos: ${primos.join(", ")}`);
+    alert(`Primos hasta ${n}: ${primos.join(", ")}`);
 }
 
 // 16. Contador de caracteres
@@ -225,28 +252,29 @@ function ejercicio16() {
         if (conteo[c]) conteo[c]++;
         else conteo[c] = 1;
     }
-    alert(`16. Conteo: ${JSON.stringify(conteo)}`);
+    let resumen = Object.entries(conteo).map(([k,v]) => `${k}: ${v}`).join("\n");
+    alert(`Conteo de caracteres:\n${resumen}`);
 }
 
 // 17. Ingresar N valores e imprimir solo los pares
 function ejercicio17() {
     let input = prompt("17. Ingresa números separados por comas:");
     if (!input) {
-        alert("¡No ingresaste nada!");
+        alert("No ingresaste nada");
         return;
     }
 
     let numeros = [];
     for (let item of input.split(',')) {
         let num = Number(item.trim());
-        if (String(num) !== "NaN") numeros.push(num);
+        if (!isNaN(num)) numeros.push(num);
     }
 
     let pares = numeros.filter(n => n % 2 === 0);
-    
+
     if (pares.length === 0) {
-        alert("No se encontraron números pares ");
+        alert("No se encontraron números pares");
     } else {
-        alert(`Pares encontrados:\n${pares.join(", ")}`);
+        alert(`Números pares: ${pares.join(", ")}`);
     }
 }
