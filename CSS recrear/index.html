@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Perfil</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Mi perfil</a>
+            <a href="#">Conexiones</a>
+            <a href="#" style="white-space: nowrap;">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Profile Section -->
+        <section aria-label="Perfil de usuario Jane Doe" class="profile-card">
+            <div class="profile-header">
+                <div aria-label="Foto de perfil genérica de usuario" class="profile-image">
+                    <img alt="Foto de perfil genérica de usuario, icono de persona gris sobre fondo claro" src="icon/icon.png" />
+                </div>
+            </div>
+            <div class="profile-info">
+                <h2>Jane Doe</h2>
+                <p class="location">Bergen, Noruega</p>
+                <p class="description">
+                    Desarrolladora Frontend
+                    <br />
+                    Conocimientos en HTML, CSS, JavaScript
+                </p>
+                <a aria-label="Editar perfil" class="edit-profile" href="#">
+                    <i aria-hidden="true" class="fas fa-cog"></i>
+                    Editar perfil
+                </a>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside aria-label="Panel de conexiones y solicitudes" class="side-cards">
+            <!-- Connection Requests -->
+            <section aria-label="Solicitudes de conexión" class="card">
+                <div class="card-header">
+                    <h3>Solicitudes de conexión</h3>
+                    <a aria-label="Ver todas las solicitudes de conexión" class="view-all" href="#">Ver todas</a>
+                </div>
+                <ul class="connection-list">
+                    <li class="connection-item">
+                        <div aria-label="Foto de perfil genérica de Steve Jobs" class="connection-avatar">
+                            <img alt="Foto de perfil genérica de Steve Jobs, icono de persona gris sobre fondo claro" src="icon/icon.png" />
+                        </div>
+                        <span class="connection-name">Steve Jobs</span>
+                        <div class="connection-actions">
+                            <button aria-label="Aceptar solicitud de Steve Jobs" class="btn-accept" type="button">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button aria-label="Rechazar solicitud de Steve Jobs" class="btn-reject" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="connection-item">
+                        <div aria-label="Foto de perfil genérica de Bill Gates" class="connection-avatar">
+                            <img alt="Foto de perfil genérica de Bill Gates, icono de persona gris sobre fondo claro" src="icon/icon.png" />
+                        </div>
+                        <span class="connection-name">Bill Gates</span>
+                        <div class="connection-actions">
+                            <button aria-label="Aceptar solicitud de Bill Gates" class="btn-accept" type="button">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button aria-label="Rechazar solicitud de Bill Gates" class="btn-reject" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Your Connections -->
+            <section aria-label="Tus conexiones" class="card">
+                <div class="card-header">
+                    <h3>Tus conexiones</h3>
+                    <a aria-label="Ver todas tus conexiones" class="view-all" href="#">Ver todas</a>
+                </div>
+                <ul class="connection-list">
+                    <li class="connection-item">
+                        <div aria-label="Foto de perfil genérica de Richard Stallman" class="connection-avatar">
+                            <img alt="Foto de perfil genérica de Richard Stallman, icono de persona gris sobre fondo claro" src="icon/icon.png" />
+                        </div>
+                        <span class="connection-name">Richard Stallman</span>
+                    </li>
+                    <li class="connection-item">
+                        <div aria-label="Foto de perfil genérica de Linus Torvalds" class="connection-avatar">
+                            <img alt="Foto de perfil genérica de Linus Torvalds, icono de persona gris sobre fondo claro" src="icon/icon.png" />
+                        </div>
+                        <span class="connection-name">Linus Torvalds</span>
+                    </li>
+                    <li class="connection-item">
+                        <div aria-label="Foto de perfil genérica de Ada Lovelace" class="connection-avatar">
+                            <img alt="Foto de perfil genérica de Ada Lovelace, icono de persona gris sobre fondo claro" src="icon/icon.png" />
+                        </div>
+                        <span class="connection-name">Ada Lovelace</span>
+                    </li>
+                    <li class="connection-item">
+                        <div aria-label class="connection-avatar"> <img alt src="icon/icon.png" />
+                        </div>
+                        <span class="connection-name">Grace Hopper</span>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+</body>
+
+</html>
