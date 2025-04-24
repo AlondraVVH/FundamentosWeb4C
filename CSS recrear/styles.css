@@ -69,23 +69,11 @@ main {
 }
 
 .profile-image {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    border: 12px solid #fff;
+    height: 120px;
     position: absolute;
     bottom: -48px;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.profile-image img {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    display: block;
-    margin: 12px auto 0 auto;
 }
 
 .profile-info {
