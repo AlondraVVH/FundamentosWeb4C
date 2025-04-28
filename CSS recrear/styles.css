@@ -1,28 +1,30 @@
+/* General Reset */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #e6f0f6;
     color: #000;
 }
 
+/* Header */
 header {
     background-color: #1b3a57;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
     height: 56px;
+    padding: 0 20px;
 }
 
 header h1 {
     color: #fff;
-    font-weight: 700;
     font-size: 24px;
-    margin: 0;
+    font-weight: 700;
 }
 
 nav {
@@ -45,21 +47,24 @@ nav a:last-child {
     font-weight: 600;
 }
 
+/* Main Layout */
 main {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
     max-width: 960px;
     margin: 24px auto;
-    display: flex;
-    gap: 24px;
-    flex-wrap: nowrap;
     padding: 0 12px;
 }
 
+/* Profile Card */
 .profile-card {
     background-color: #fff;
     border-radius: 8px;
-    flex: 0 0 600px;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    flex: 360px;
+    box-shadow:  2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    position: relative;
 }
 
 .profile-header {
@@ -69,7 +74,12 @@ main {
 }
 
 .profile-image {
-    height: 120px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: #f0f0f0;
+    object-fit: cover;
     position: absolute;
     bottom: -48px;
     left: 50%;
@@ -77,45 +87,44 @@ main {
 }
 
 .profile-info {
-    padding: 64px 24px 24px 24px;
+    padding: 64px 24px 24px;
     text-align: center;
 }
 
 .profile-info h2 {
-    margin: 0 0 6px 0;
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
 .profile-info p.location {
-    margin: 0 0 12px 0;
-    font-weight: 400;
     font-size: 14px;
     color: #bfbfbf;
+    margin-bottom: 12px;
 }
 
 .profile-info p.description {
-    margin: 0 0 12px 0;
-    font-weight: 400;
     font-size: 14px;
     color: #000;
+    margin-bottom: 12px;
 }
 
 .edit-profile {
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 600;
     color: #0087dc;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 6px;
     cursor: pointer;
-    text-decoration: none;
 }
 
 .edit-profile i {
     font-size: 16px;
 }
 
+/* Side Cards */
 .side-cards {
     flex: 1 1 320px;
     display: flex;
@@ -128,9 +137,10 @@ main {
     background-color: #fff;
     border-radius: 8px;
     padding: 16px 20px;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Card Header */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -139,58 +149,56 @@ main {
 }
 
 .card-header h3 {
-    margin: 0;
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
 }
 
 .view-all {
-    font-weight: 600;
     font-size: 12px;
+    font-weight: 600;
     color: #0087dc;
     border: 1.5px solid #0087dc;
     border-radius: 4px;
     padding: 2px 8px;
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
 }
 
+/* Connection List */
 .connection-list {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .connection-item {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
 }
 
-.connection-item:last-child {
-    margin-bottom: 0;
+.connection-item:hover {
+    background-color: #f5f5f5;
 }
 
 .connection-avatar {
-    width: 32px;    
-    
-}
-
-.connection-avatar img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto;         
+    object-fit: cover;
 }
 
+/* Connection Name */
 .connection-name {
-    font-weight: 400;
     font-size: 14px;
+    font-weight: 400;
     flex-grow: 1;
 }
 
+/* Connection Actions */
 .connection-actions {
     display: flex;
     gap: 8px;
@@ -202,38 +210,17 @@ main {
     height: 20px;
     border-radius: 50%;
     border: none;
-    cursor: pointer;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .btn-accept {
     background-color: #00b386;
-    color: #fff;
 }
 
 .btn-reject {
     background-color: #ff6b6b;
-    color: #fff;
-}
-
-@media (max-width: 720px) {
-    main {
-        flex-direction: column;
-        max-width: 100%;
-        margin: 16px auto;
-        padding: 0 12px;
-    }
-
-    .profile-card,
-    .side-cards {
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-
-    .side-cards {
-        flex-direction: column;
-        gap: 16px;
-    }
 }
