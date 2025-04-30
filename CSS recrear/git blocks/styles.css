@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffff; 
+    padding: 0px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    margin-bottom: 35px;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilos de las filas */
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+/* Colores de fondo para las filas */
+.top {
+    background-color: #6D6999;
+}
+
+.mid {
+    background-color: #7DA6AA;
+}
+
+.back {
+    background-color: #CF6148;
+}
+
+/* Bloques de imágenes */
+.block {
+    padding: 12px;
+}
+
+.block img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
