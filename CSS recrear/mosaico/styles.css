@@ -25,3 +25,9 @@
     height: 500px;
 flex:3;
 }
+
+.rectangulo{
+margin: 10px;
+height: 100px;
+    flex:1;
+}
