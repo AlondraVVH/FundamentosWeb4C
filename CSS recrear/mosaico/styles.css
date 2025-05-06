@@ -1,0 +1,27 @@
+* {
+    padding:0;
+    margin:0;
+    outline: solid 1px red;
+
+}
+
+.container {
+    display: flex;
+    height: 800px;
+}
+.izquierda { flex:1;
+}
+.derecha{
+    flex:1;
+}
+.bloques{
+    display: flex;
+}
+.column1{
+    height: 500px;
+    flex:1;
+}
+.column2{
+    height: 500px;
+flex:3;
+}
