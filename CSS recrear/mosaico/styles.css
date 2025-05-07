@@ -1,33 +1,67 @@
-* {
-    padding:0;
-    margin:0;
+*{
+    padding: 0;
+    margin: 0;
     outline: solid 1px red;
-
 }
-
-.container {
+.container{
     display: flex;
-    height: 800px;
+    padding: 50px 150px;
 }
-.izquierda { flex:1;
+/* Columnas principales */
+.column-container{
+    flex:1
 }
-.derecha{
-    flex:1;
-}
-.bloques{
+
+.row{
     display: flex;
+    padding: 10px;
 }
 .column1{
-    height: 500px;
-    flex:1;
+flex:2;
 }
 .column2{
-    height: 500px;
-flex:3;
+flex:1;
+padding-left: 10px;
 }
 
-.rectangulo{
-margin: 10px;
-height: 100px;
-    flex:1;
+.items{
+    background-color: gray;
 }
+
+.top{
+    height: 200px;
+    margin-bottom: 15px;
+}
+.bottom{
+    height: 100px;
+}
+
+.a{
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.b{
+    height: 150px;
+}
+
+.left{
+    height: 300px;
+    width: 180px;
+
+}
+
+.right{
+    margin-left: 10px;
+    height: 125px;
+    width: 325px;
+
+}
+
+.right2{
+    height: 125px;
+    width: 325px;
+    margin-left: 10px;
+    margin-top:20px;
+}
+
