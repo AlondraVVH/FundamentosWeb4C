@@ -1,0 +1,84 @@
+/* reseteo de pagina y configuración del sitio  */
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf1e6;
+}
+
+/* estilo encabezado */
+.encabezado {
+    background-color: #34495E;
+    color: white;
+    text-align: center;
+    padding: 32px 16px 32px;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.encabezado p {
+    font-size: 14.4px;
+    margin-top: 8px;
+}
+
+.caja-principal p{
+    font-size: 11.2px;
+}
+
+/* contenedor principal */
+.contenedor {
+    background: white;
+    max-width: 960px;
+    margin: 32px auto;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*  diseño pricipal  */
+.caja-principal {
+    background-color: #E67E22;
+    padding: 32px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.caja-principal h2 {
+    margin: 0 0 8px;
+    font-size: 20.8px;
+}
+
+/*  targetas */
+.tarjetas-flexibles {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: #D35400;
+    flex: 1;
+    min-width: 250px;
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.tarjeta p{
+    font-size: 11.2px;
+}
