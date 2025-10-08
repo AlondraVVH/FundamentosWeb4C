@@ -1,6 +1,19 @@
-function over(element) {
-element.style.backgroundColor = &quot;lime&quot;;
+console.log("funcionando")
+function videoPlay(element){
+    element.play();
 }
-function out(element) {
-element.style.backgroundColor = &quot;silver&quot;;
+
+function videoPause(element){
+    element.pause();
+}
+
+function clickVideo(elemento){
+    const videoGrande = document.getElementById("videoGrande");
+    let sourceVideoGrande = videoGrande.src;
+        videoGrande.src = elemento.src;
+        elemento.src = sourceVideoGrande;
+
+        const tituloPrincipal = document.getElementById("tituloPrincipal");
+        let textoTitleMain = tituloPrincipal.textContent;
+        
 }

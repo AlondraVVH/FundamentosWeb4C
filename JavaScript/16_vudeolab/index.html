@@ -23,11 +23,11 @@
 
         <div class="col-l">
 
-            <video src= "resources/video/auto.mp4" class="video-main" controls autoplay loop></video>
+            <video id="videoGrande" src= "resources/video/auto.mp4" class="video-main" controls autoplay loop></video>
 
             <div class="row">
                 <div class="start">
-                    <h1> El Sonido de los MCLAREN ARTURA SPIDER</h1>
+                    <h1 id="tituloPrincipal"> El Sonido de los MCLAREN ARTURA SPIDER</h1>
                     <h3>1.3K Views | June, 18, 2021</h3>
                     <div class="user">
                         <img src="resources/imagenes/user.jpg" alt="user-circle" class="avatar-s">
@@ -43,29 +43,29 @@
 
             <h3 class="sub-header">Up Next</h3>
             <hr> <div class="video-small">
-                <video src="resources/video/trueno.mp4" alt="video placeholder" class="vid-s"></video>
-                <h4 class="video-title">Rayo en Súper Lenta (1000 FPS)</h4>
+                <video src="resources/video/trueno.mp4" alt="video placeholder" class="vid-s" onclick="clickVideo(this)" onmouseover="videoPlay(this)" onmouseout="videoPause(this)"></video>
+                <h4 id ="tituloSecundario" class="video-title">Rayo en Súper Lenta (1000 FPS)</h4>
             </div> 
 
             <div class="video-small">
-                <video src="resources/video/luna.mp4" alt="video placeholder" class="vid-s"></video>
-                <h4 class="video-title">El Mejor Café Frío en 5 Minutos</h4>
+                <video src="resources/video/luna.mp4" alt="video placeholder" class="vid-s" onclick="clickVideo(this)" onmouseover="videoPlay(this)" onmouseout="videoPause(this)"></video>
+                <h4 id ="tituloSecundario" class="video-title">El Mejor Café Frío en 5 Minutos</h4>
             </div>
 
             <div class="video-small">
-                <video src="resources/video/cereso.mp4" alt="video placeholder" class="vid-s"></video>
-                <h4 class="video-title">Timelapse: 30 Días de Luna</h4>
+                <video src="resources/video/cereso.mp4" alt="video placeholder" class="vid-s" onclick="clickVideo(this)" onmouseover="videoPlay(this)" onmouseout="videoPause(this)"></video>
+                <h4 id ="tituloSecundario" class="video-title">Timelapse: 30 Días de Luna</h4>
             </div>
 
             <div class="video-small">
-                <video src="resources/video/coffee.mp4" alt="video placeholder" class="vid-s"></video>
-                <h4 class="video-title">4K de Flores de Cerezo (Sakura)</h4>
+                <video src="resources/video/coffee.mp4" alt="video placeholder" class="vid-s" onclick="clickVideo(this)" onmouseover="videoPlay(this)" onmouseout="videoPause(this)"></video>
+                <h4 id ="tituloSecundario" class="video-title">4K de Flores de Cerezo (Sakura)</h4>
             </div>
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
