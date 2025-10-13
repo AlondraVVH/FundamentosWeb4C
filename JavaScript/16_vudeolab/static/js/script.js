@@ -1,4 +1,4 @@
-console.log("funcionando")
+
 function videoPlay(element){
     element.play();
 }
@@ -15,5 +15,10 @@ function clickVideo(elemento){
 
         const tituloPrincipal = document.getElementById("tituloPrincipal");
         let textoTitleMain = tituloPrincipal.textContent;
-        
+        const textoPequeno = elemento.nextElementSibling;
+        let contentTextoPequeno = textoPequeno.textContent
+
+        tituloPrincipal.textContent = contentTextoPequeno;
+        textoPequeno.textContent = textoTitleMain;
+
 }
