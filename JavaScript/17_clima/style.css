@@ -7,20 +7,18 @@
 }
 
 body {
-    background-color: #f0f0f0;
-    min-height: 100vh;
-    display: flex;
+    background-color: #ffffff;
+    min-height: 80%;
     justify-content: center;
 }
 
 .weather-app {
-    width: 800px;
+    width: 80%;
     background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
     border-radius: 8px;
-    margin: 50px 0;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 header {
@@ -94,25 +92,24 @@ main {
     justify-content: space-between;
     height: 300px;
     text-align: center;
-    width: 25%;
-    background-color: white;
+    width: 20%;
+    background-color: #e9e8e8;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
 }
 
 .weather-icon {
     margin: 10px 0; 
-    height: 65px; 
+    height: 150px; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .weather-icon img {
-    width: 65px; 
-    height: 65px; 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 250px;
 }
 
 .temperatures {
@@ -137,13 +134,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8;
-    border-top: 1px solid #eee;
+    background-color: #e9e8e8;
     padding: 15px 20px;
-    /* Redondeamos las esquinas inferiores para que coincida con el borde del weather-app */
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
+
 }
 
 .cookie-content {
