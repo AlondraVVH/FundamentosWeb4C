@@ -1,0 +1,81 @@
+/* Variables CSS para consistencia de color */
+:root {
+    /* Color de acento: Azul minimalista */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --transition-speed: 0.3s;
+    /* Tipografía moderna y legible */
+    --font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    color: #333;
+}
+
+/* Estilos de encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Navegación y Scrollspy */
+#mainNav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    transition: color var(--transition-speed);
+}
+/* Estilo del link activo y hover */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* 4. SKILLS & PORTFOLIO - Tarjetas Interactivas */
+.skill-card, .portfolio-item {
+    transition: all var(--transition-speed) ease-in-out;
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+}
+
+/* Efecto Hover Moderno: Ligera elevación y acento (controlado por CSS) */
+.skill-card:hover, .portfolio-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* 6. EXPERIENCIA y 5. EDUCACIÓN - Líneas de Tiempo Minimalistas */
+.experience-item, .education-item {
+    padding-left: 2rem !important;
+}
+
+/* 8. Contacto - Iconos Hover */
+#contact a.hover-effect {
+    transition: color var(--transition-speed);
+}
+#contact a.hover-effect:hover {
+    color: #ffffff !important; /* El color de fondo es oscuro, el icono se vuelve blanco */
+}
+
+/* Botón Volver Arriba */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+}
